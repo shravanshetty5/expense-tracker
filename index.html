@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Expense Tracker</title>
   </head>
   <body>
     <header>
-      <h2>Expense Tracker</h2>
+      <h1>Expense Tracker</h1>
     </header>
     <main>
       <div class="balance-container">
@@ -17,26 +23,28 @@
       </div>
 
       <div class="income-expense">
-        <div class="income-container">
+        <div class="income-expense-container">
           <h4>INCOME</h4>
           <div class="income" id="income">+$300.00</div>
         </div>
-        <div class="expense-container">
+        <div class="income-expense-container">
           <h4>EXPENSE</h4>
           <div class="expense" id="expense">-$200.00</div>
         </div>
       </div>
       <!-- Transaction History -->
       <section>
-        <h4>History</h4>
+        <h3>History</h3>
         <ul class="transcation-container" id="transcation-container">
-          <li>Camera<span>-100</span><button class="delete-btn"></button></li>
+          <li class="minus">
+            Camera<span>-$100</span><button class="delete-btn">x</button>
+          </li>
         </ul>
       </section>
       <!-- Add transaction section -->
       <section>
-        <h4>Add new transaction</h4>
-        <form action="" id="add-transaction">
+        <h3>Add new transaction</h3>
+        <form id="add-transaction">
           <div class="form-control">
             <label for="transaction-name">Text</label>
             <input
@@ -51,11 +59,11 @@
               (negative - expense, positive - income)</label
             >
             <input
-              type="text"
+              type="number"
               id="transaction-amount"
               placeholder="Enter amount..."
             />
-            <input type="submit" value="Add transaction" />
+            <input type="submit" class="btn" value="Add transaction" />
           </div>
         </form>
       </section>
