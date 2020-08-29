@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <title>Expense Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h2>Expense Tracker</h2>
+    </header>
+    <main>
+      <div class="balance-container">
+        <h4>YOUR BALANCE</h4>
+        <div class="balance" id="balance">$200.00</div>
+      </div>
+
+      <div class="income-expense">
+        <div class="income-container">
+          <h4>INCOME</h4>
+          <div class="income" id="income">+$300.00</div>
+        </div>
+        <div class="expense-container">
+          <h4>EXPENSE</h4>
+          <div class="expense" id="expense">-$200.00</div>
+        </div>
+      </div>
+      <!-- Transaction History -->
+      <section>
+        <h4>History</h4>
+        <ul class="transcation-container" id="transcation-container">
+          <li>Camera<span>-100</span><button class="delete-btn"></button></li>
+        </ul>
+      </section>
+      <!-- Add transaction section -->
+      <section>
+        <h4>Add new transaction</h4>
+        <form action="" id="add-transaction">
+          <div class="form-control">
+            <label for="transaction-name">Text</label>
+            <input
+              type="text"
+              id="transaction-name"
+              placeholder="Enter text..."
+            />
+          </div>
+          <div class="form-control">
+            <label for="transaction-amount"
+              >Amount <br />
+              (negative - expense, positive - income)</label
+            >
+            <input
+              type="text"
+              id="transaction-amount"
+              placeholder="Enter amount..."
+            />
+            <input type="submit" value="Add transaction" />
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
